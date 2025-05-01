@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 const allowedOrigins = [
   "https://os.netlabdte.com",
   "http://localhost:5173",
+  "http://cs9-nelsonlaurensius.vercel.app",
 ];
 
 const corsOption = {
@@ -24,7 +25,11 @@ const corsOption = {
 app.use(cors(corsOption));
 
 app.get("/", (req, res) =>{
-  res.send("Cors already config with netlab domain and localhost"); 
+  res.send("Cors already configured"); 
+});
+
+app.get('/favicon.ico', (req, res) => {
+  res.status(204).end(); 
 });
 
 app.use("/store", require("./src/routes/store.route"));
