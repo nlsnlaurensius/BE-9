@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 const allowedOrigins = [
   "https://os.netlabdte.com",
   "http://localhost:5173",
-  "http://cs9-nelsonlaurensius.vercel.app",
+  "https://cs9-nelsonlaurensius.vercel.app",
 ];
 
 const corsOption = {
